@@ -144,6 +144,7 @@ padding-left: 10px;
 
 #mas {
 margin-right: 10px;
+cursor: pointer;
 }
 
 /* formulario para publicar */
@@ -162,7 +163,7 @@ margin-right: 10px;
     width: 80%;
     height: 50px;
     border-color: rgba(0, 0, 0, 0.219);
-    cursor: pointer;
+    cursor: text;
 }
 
 .fotoDePerfil {
@@ -184,7 +185,7 @@ margin-right: 10px;
 
 #task-container{
     width: 100%;
-    height: 60%;
+    /* height: 60%; */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
