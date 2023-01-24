@@ -232,11 +232,12 @@ p {
 }
 .logoutQContainer{
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     height: 100%;
     width: 100%;
     backdrop-filter: blur(10px);
+    justify-content: center;
 }
 .logoutQ {
     display: none;
@@ -246,7 +247,7 @@ p {
     text-align: center;
     position: absolute;
     top: 25vh;
-    left: 15vw;
+    /* left: 15vw; */
     height: 50vh;
     width: 70vw;
     background-color: rgba(217, 217, 217, 1);
@@ -476,19 +477,8 @@ ul:hover li {
 }
 
 
-/* position: absolute;
-top: 25vh;
-left: 15vw;
-color: black; */
-
-
 .edit{
-    /* background: #90ADC6; */
-    /* display: flex; */
-    /* align-items: center;
-    justify-content: center; */
-    /* height: 240px;
-    width: 240px; */
+
     height: 50vh;
     width: 70vw;
     background-color: rgba(250, 250, 250, 1);
@@ -601,6 +591,17 @@ color: black; */
         min-width: 360px;
         width: 60%;
        
+    }
+    .logoutQContainer {
+        min-width: 360px;
+        width: inherit;
+        
+    }
+    .logoutQ {
+        position: absolute;
+        height: 50vh;
+        min-width: 245px;
+        max-width: 360px;    
     }
     .footerDeHome{
         min-width: 360px;
