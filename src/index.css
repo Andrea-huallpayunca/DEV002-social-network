@@ -13,7 +13,7 @@ body {
     height: 100%;
 }
 
-.pantalla {
+.pantalla, .bienvenida {
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -25,6 +25,8 @@ body {
     background-color: #90ADC6;
     color: #333652;
     font-size: 16px;
+     z-index: 4;
+     min-width: 360;
 }
 
 /*----Inicio sesión y Registro--------------------------------------------------------- */
@@ -44,19 +46,11 @@ body {
 
 /* --------Bienvenida---------------- */
 
- #bienvenida {
+ .bienvenida {
     color: rgba(233, 234, 236, 1);
     line-height: 2;
 }
-/*
-#bienvenida .logo {
-    margin: 20px;
-}
 
-#bienvenida p {
-    width: 70%;
-}
-*/
 .frase {
     font-weight: bolder;
 } 
@@ -153,9 +147,14 @@ p {
 
 /* -----HOME---------------------------------- */
 .home {
-    height: 100%;
+    /* height: 100%; */
+    height: max-content;
     width: 100%;
     background-color: #FCFCFC;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* encabezado------- */
@@ -281,6 +280,7 @@ p {
     border-radius: 15px;
     border-width: 4px;
     padding: 20px;
+    max-width: 320px;
 }
 
 .inputPostPorPublicar {
@@ -315,6 +315,7 @@ p {
     border: 4px solid #c7c2c2;
     border-radius: 20px;
     margin: 15px auto 15px auto;
+    max-width: 320px;
 }
 
 
@@ -360,6 +361,8 @@ p {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    background-color: #FCFCFC;
+    margin-bottom: 60px;
 
 }
 
@@ -431,8 +434,9 @@ ul:hover li {
     padding-bottom: 0px;
     /* position: relative; */
     z-index: 300;
-    width: 100%;
+    /* width: 100%; */
     position: fixed;
+    width: inherit;
     bottom: 0;
 }
 
@@ -550,58 +554,132 @@ color: black; */
     padding-bottom: 20px;
     padding-top: 20px;
 }
-/* .btnGuardar{
-    background-color: #333652;
-    border-radius: 40px;
-    color: aliceblue;
-    font-size: small;
-    border: none;
-    cursor: pointer;
+
+/* .loginOculto{
+    display: none;
 } */
-
-
-
-
-/* 
-
-@media (min-width:375px) {
-body{
-background-color: #c3d4e4;
-display: flex;
-align-items: center;
-justify-content: center;
+.Inicio{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    /* background-image: url('./Imagenes/Collage.png'); */
 
 }
-#app{
-width: 375px;
+.fondo{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-image: url('./Imagenes/Collage.png');
+    z-index: 2
+}
+.InicioFilter{
+    position:fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #07213478;
+    backdrop-filter: blur(3px);
+    z-index: 3;
+ }
+@media (min-width:360px) {
+    .pantalla {
+        width: 360px;
+    }
+    .bienvenida{
+        min-width: 360px;
+        width: 60%;
+        display: flex;
+        gap: 50px;
+    }
+    .presentacion, .comenzar{
+        width: 80%;
+    }
+    .home{
+        min-width: 360px;
+        width: 60%;
+       
+    }
+    .footerDeHome{
+        min-width: 360px;
+        
+    }
+}
+@media (min-width:600px){
+    .Inicio{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    }
+    .loginOculto{
+        display:flex ;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 4;
+        width: 40%;
+        gap:50px;
+        margin-left: 50px;
 
-background-color: #90ADC6;     
-border-radius: 28px; 
+
+    }
+    .frasePagina{
+        color: #FCFCFC;
+        font-size: larger;
+        font-weight: bold;
+    }
+    .imagenesPagina{
+        display: flex;
+        justify-content: center;
+    }
+     .imagenesPagina img{
+        width: 160px;
+        height: 250px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .imagenUno{
+        background-image: url('./Imagenes/hamster.jpg');
+     
+    }
+    .imagenDos{
+        display: none;
+    }
+    .imagenTres{
+        display: none;
+    }
+}
+@media (min-width:800px){
+   
+    .imagenesPagina{
+        display: grid;
+        grid-template: 2fr/1fr;
+        grid-gap: 10px;
+    }
+    .imagenDos{
+            display: flex;
+            background-image: url('./Imagenes/gato.jpg');
+            grid-column: 2;
+        }
+}
+@media (min-width:1000px){
+    .Inicio{
+        justify-content: space-around;
+        gap: 0;
+    }
+    .loginOculto{
+        margin-left: 0;
+        width: 50%;
+    }
+    .imagenesPagina{
+        grid-template: 3fr/1fr;
+    }
+    .imagenTres{
+        display: flex;
+        background-image: url('./Imagenes/perro.jpg');  
+        grid-column: 3;
+    }
+
 
 }
-
-
-} */
-/* @media (min-width:768px){
-#app{width: 100vw;height: 100vh;background-color: #c3d4e4;}
-.pantalla{
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-align-items: center;
-width: 100%;
-}
-
-.pantallaCompu{
-width: 375px;
-height: 310px;
-background-color: #90ADC6;     
-border-radius: 28px; 
-
-}
-.presentacion{
-    width: 40%;
-}
-
-}
- */

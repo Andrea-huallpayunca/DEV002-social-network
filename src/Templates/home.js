@@ -1,4 +1,8 @@
 export const templateHome = `
+<div class="InicioFilter"></div>
+<div class="fondo"></div>
+
+<section class="home" id="home">
             <div id="cabeza">
                 <div class='head'><img id= "logoDeVistaHome" src="imagenes/Logo.png" width=50px>
                     <span id="etsbook">ETSBOOK</span>
@@ -15,6 +19,7 @@ export const templateHome = `
                     </div>
                 </div>
             </div>
+
             <form class="postPorPublicar" id="task-form">
                 <img class="fotoDePerfil" src="imagenes/pug.jpg" alt='foto del usuario' >
                 <input id='description' class="inputPostPorPublicar" placeholder='¿En qué estás pensando?' required>
@@ -31,9 +36,10 @@ export const templateHome = `
             </div>
 
             <div class="footerDeHome">
-             <div class = "divIconoHome">
-             <img class="iconHome" src="imagenes/home.png" width=25px alt='foto del usuario'>
-             </div>
-             <img class="fotoDePerfil" src="imagenes/pug.jpg" alt='foto del usuario'>
-           </div>
+                <div class ="divIconoHome">
+                <img class="iconHome" src="imagenes/home.png" width=25px alt='foto del usuario'>
+                </div>
+                <img class="fotoDePerfil" src="imagenes/pug.jpg" alt='foto del usuario'>
+            </div>
+</section>
     `;
