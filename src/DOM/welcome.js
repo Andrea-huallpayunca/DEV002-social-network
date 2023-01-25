@@ -6,6 +6,7 @@
 import { onNavigate } from '../main.js';
 import { auth, onAuthStateChanged } from '../app/config.js';
 import { templateWelcome } from '../Templates/welcome.js';
+import { user1 } from '../app/auth.js';
 
 // Pantalla 3 - Bienvenida--------------------------------
 export const Welcome = () => {
@@ -23,7 +24,7 @@ export const Welcome = () => {
   div.className = 'Inicio';
   div.id = 'bienvenida';
   // const Bienvenida = ;
-
+  console.log(user1());
   div.innerHTML = templateWelcome;
 
   const holaBienv = div.querySelector('#hola-bienvenida');

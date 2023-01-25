@@ -141,7 +141,6 @@ export const homeE = (taskContainer, taskForm, div) => {
             }).catch((err) => console.log(err));
           });
 
-          // test1.style.display = 'flex';
           deleteModalContenedor.style.display = 'flex';
           deleteModal.style.display = 'flex';
 
@@ -168,34 +167,15 @@ export const homeE = (taskContainer, taskForm, div) => {
           const doc = await getTask(id);
           const likes = doc.data().likes;
           const currentLike = likes.indexOf(userId);
-          // let numero = likes.length;
+
           console.log(likes);
           if (currentLike === -1) {
-            // btn.src = 'imagenes/like.png';
             giveLike(id, userId);
-            // console.log(btn)
-            // numero = numero + 1
-            // console.log(numero + " likes")
-            // contadorLike.innerHTML = numero + " me encanta"
           } else {
-            // btn.src = 'imagenes/dislike.png';
             disLike(id, userId);
-            // numero = numero - 1
-            // console.log(numero + " likes")
-            // contadorLike.innerHTML = numero + " me encanta"
-            // console.log(btn)
           }
         });
       });
-
-      // const btnEliminar = taskContainer.querySelectorAll('.delete');
-
-      // btnEliminar.forEach((btn) => {
-      //   btn.addEventListener('click', (e) => {
-      //     deleteTask(e.target.dataset.id);
-      //   });
-      // });
-
       const btnEditar = taskContainer.querySelectorAll('.editar');
 
       btnEditar.forEach((btn) => {

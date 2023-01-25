@@ -86,6 +86,17 @@ export const updateTask = (id, nuevosCampos) => {
   updateDoc(doc(conFirestore, 'tasks', id), nuevosCampos);
 };
 
+// export const upProfile = (name, id) => updateDoc(doc(conFirestore, 'usuarios', id), {
+//   nombre: name,
+// });
+// export const upProfile = (name, id) => {
+//   // console.log(description);
+//   addDoc(collection(conFirestore, 'usuarios'), {
+//     id,
+//     name,
+//   });
+// };
+
 // -----LIKES----------------------
 
 export const giveLike = (id, nuevoLike) => {

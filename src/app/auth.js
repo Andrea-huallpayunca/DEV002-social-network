@@ -7,6 +7,7 @@ import {
   signInWithPopup,
   signOut,
   signInWithEmailAndPassword,
+  // updateProfile,
 } from './config.js';
 
 // para logIn
@@ -27,6 +28,11 @@ const signup = (email, password) => createUserWithEmailAndPassword(auth, email, 
 // para Home
 const logout = () => signOut(auth);
 
+// const profile = (name) => updateProfile(auth.currentUser, {
+//   displayName: name,
+
+// });
+
 // el observador
 const userState = (user) => onAuthStateChanged(auth, user);
 
@@ -42,4 +48,5 @@ export {
   userState,
   onAuthStateChanged,
   user1,
+  // profile,
 };
